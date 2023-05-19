@@ -1,5 +1,5 @@
 function add(a,b) {
-    return a+b ;
+    return a+b;
 };
 
 function subtract(a,b) {
@@ -13,8 +13,23 @@ function multiply(a,b) {
 function divide(a,b) {
     return a/b ;
 };
-console.log(divide(4,2));
 
-let firstNumber;
-let secondNumber;
+
+let a;
+let b;
 let operator;
+
+function operate (a,b,operator) {
+  if( operator === '+') {
+    add(a,b)
+  }
+  else if (operator === '-') {
+    subtract(a,b)
+  }
+  else if (operator === '*') {
+    multiply(a,b)
+  }
+  else if (operator === '/') {
+    divide (a,b)
+  }
+}
