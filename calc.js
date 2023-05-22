@@ -49,3 +49,7 @@ const middlePart = document.querySelector('.middlePart')
 operators.forEach((operator) => operator.addEventListener('click', () => a = firstPart.textContent ))
 operators.forEach((operator) => operator.addEventListener('click', (e) => c = e.target.textContent ))
 operators.forEach((operator) => operator.addEventListener('click', (e) => middlePart.textContent = e.target.textContent ))
+
+const equals = document.querySelector('.equals')
+const display = document.querySelector('.display')
+equals.addEventListener('click', () => display.textContent = '')
