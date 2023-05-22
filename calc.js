@@ -17,7 +17,7 @@ function divide(a,b) {
 
 let a;
 let b;
-let operator;
+let c;
 
 function operate (a,b,operator) {
   if( operator === '+') {
@@ -34,9 +34,18 @@ function operate (a,b,operator) {
   }
 }
 
-const buttons = document.querySelectorAll('.buttons')
-const display = document.querySelector('.display')
-buttons.forEach( (button)=> button.addEventListener('click', (e) => display.textContent += e.target.textContent ))
+const numbers = document.querySelectorAll('.numbers')
+const firstPart = document.querySelector('.firstPart')
+const secondPart = document.querySelector('.secondPart')
+numbers.forEach( (number)=> number.addEventListener('click', 
+  function (e) {
+    if (a === firstPart.textContent) {
+    secondPart.textContent += e.target.textContent
+    } else{ firstPart.textContent += e.target.textContent}
+  }))
 
 const operators = document.querySelectorAll('.operators')
-operators.forEach((operator) => operator.addEventListener('click', () => a = display.textContent ))
+const middlePart = document.querySelector('.middlePart')
+operators.forEach((operator) => operator.addEventListener('click', () => a = firstPart.textContent ))
+operators.forEach((operator) => operator.addEventListener('click', (e) => c = e.target.textContent ))
+operators.forEach((operator) => operator.addEventListener('click', (e) => middlePart.textContent = e.target.textContent ))
