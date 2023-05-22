@@ -33,3 +33,7 @@ function operate (a,b,operator) {
     return divide (a,b)
   }
 }
+
+const buttons = document.querySelectorAll('.buttons')
+const display = document.querySelector('.display')
+buttons.forEach( (button)=> button.addEventListener('click', (e) => display.textContent += e.target.textContent ))
