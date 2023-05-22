@@ -37,3 +37,6 @@ function operate (a,b,operator) {
 const buttons = document.querySelectorAll('.buttons')
 const display = document.querySelector('.display')
 buttons.forEach( (button)=> button.addEventListener('click', (e) => display.textContent += e.target.textContent ))
+
+const operators = document.querySelectorAll('.operators')
+operators.forEach((operator) => operator.addEventListener('click', () => a = display.textContent ))
