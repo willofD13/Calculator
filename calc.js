@@ -1,35 +1,36 @@
 function add(a,b) {
-    return a+b;
+    return result = (Number(a)+ Number(b));
 };
 
 function subtract(a,b) {
-    return a-b ;
+    return result = a-b ;
 };
 
 function multiply(a,b) {
-    return a*b ;
+    return result = a*b ;
 };
 
 function divide(a,b) {
-    return a/b ;
+    return result = a/b ;
 };
 
 
 let a;
 let b;
 let c;
+let result;
 
-function operate (a,b,operator) {
-  if( operator === '+') {
+function operate () {
+  if( c === '+') {
     return add(a,b)
   }
-  else if (operator === '-') {
+  else if (c === '-') {
     return subtract(a,b)
   }
-  else if (operator === '*') {
+  else if ( c=== '*') {
     return multiply(a,b)
   }
-  else if (operator === '/') {
+  else if ( c=== '/') {
     return divide (a,b)
   }
 }
@@ -53,3 +54,6 @@ operators.forEach((operator) => operator.addEventListener('click', (e) => middle
 const equals = document.querySelector('.equals')
 const display = document.querySelector('.display')
 equals.addEventListener('click', () => display.textContent = '')
+equals.addEventListener('click', () => b = secondPart.textContent)
+equals.addEventListener('click', operate)
+equals.addEventListener('click', () => display.textContent = result)
