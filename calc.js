@@ -97,3 +97,9 @@ equals.addEventListener('click', function(){
 
 
 clearButton.addEventListener('click', () => display.textContent = '')
+clearButton.addEventListener('click', () => a = null )
+clearButton.addEventListener('click', () => f = null )
+clearButton.addEventListener('click', () => b = '' )
+clearButton.addEventListener('click', () => c = '' )
+clearButton.addEventListener('click', () => d = '' )
+clearButton.addEventListener('click', () => result = '' )
