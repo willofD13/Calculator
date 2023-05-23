@@ -1,7 +1,11 @@
+body {
+    display: flex;
+}
 .calculator {
     display: flex;
     flex-direction: column;
-    
+    margin: auto;
+    margin-top: 200px;
 }
 
 .display {
@@ -30,5 +34,13 @@ button {
 }
 
 #zero {
+    width: 104px;
+}
+
+.equals {
+    width: 105px;
+}
+
+.AC {
     width: 104px;
 }
