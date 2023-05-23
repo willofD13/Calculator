@@ -27,8 +27,6 @@ function divide(a,b) {
 };
 
 
-
-
 function operate () {
   if( c === '+') {
     return add(a,b)
@@ -83,9 +81,6 @@ operators.forEach((operator) => operator.addEventListener('click',
   }));
 
 
-
-
-
 equals.addEventListener('click', () => b = display.textContent)
 equals.addEventListener('click', () => display.textContent = '')
 equals.addEventListener('click', operate)
@@ -94,7 +89,6 @@ equals.addEventListener('click', function(){
    f = d.toString();
    display.textContent = f;
 })
-
 
 clearButton.addEventListener('click', () => display.textContent = '')
 clearButton.addEventListener('click', () => a = null )
