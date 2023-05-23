@@ -3,7 +3,7 @@ const operators = document.querySelectorAll('.operators')
 const equals = document.querySelector('.equals')
 const display = document.querySelector('.display')
 const clearButton = document.querySelector('.AC')
-let a= null ;
+let a;
 let b;
 let c;
 let result;
