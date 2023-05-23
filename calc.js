@@ -7,6 +7,7 @@ let a= null ;
 let b;
 let c;
 let result;
+let d;
 
 function add(a,b) {
     return result = (Number(a)+ Number(b));
@@ -45,7 +46,7 @@ function operate () {
 
 numbers.forEach((number)=> number.addEventListener('click', 
 function (e) {
-  if (a === display.textContent || display.textContent === resultString) {
+  if (a === display.textContent || display.textContent === d) {
     display.textContent = '' ;
     display.textContent = e.target.textContent ;
   } else { display.textContent += e.target.textContent}
@@ -61,7 +62,10 @@ operators.forEach((operator) => operator.addEventListener('click', (e) => c = e.
 equals.addEventListener('click', () => b = display.textContent)
 equals.addEventListener('click', () => display.textContent = '')
 equals.addEventListener('click', operate)
-equals.addEventListener('click', display.textContent = result)
+equals.addEventListener('click', function(){
+   d = result.toString();
+   display.textContent = d;
+})
 
 
 clearButton.addEventListener('click', () => display.textContent = '')
