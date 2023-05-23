@@ -3,7 +3,7 @@ const operators = document.querySelectorAll('.operators')
 const equals = document.querySelector('.equals')
 const display = document.querySelector('.display')
 const clearButton = document.querySelector('.AC')
-let a;
+let a = null;
 let b;
 let c;
 let result;
@@ -52,8 +52,21 @@ function (e) {
   } else { display.textContent += e.target.textContent}
 }))
 
-operators.forEach((operator) => operator.addEventListener('click', () => a = display.textContent ))
-operators.forEach((operator) => operator.addEventListener('click', (e) => c = e.target.textContent ))
+operators.forEach((operator) => operator.addEventListener('click', 
+  function (e) {
+    if (a === null) {
+      a = display.textContent ;
+      c = e.target.textContent ; 
+    } else if ( a !== null) {
+      b = display.textContent ;
+      display.textContent = '' ;
+      operate() ;
+      d = result.toString() ;
+      display.textContent = d ;
+      a = d ;
+      c = e.target.textContent ;
+    }
+  }));
 
 
 
