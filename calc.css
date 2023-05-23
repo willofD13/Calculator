@@ -26,11 +26,17 @@ body {
     width: 160px;
 }
 #number {
+    color: peachpuff;
     background-color: blueviolet;
 }
 
 .operators {
+    background-color: peachpuff;
     width: 50px;
+}
+.operator {
+    color: blueviolet;
+    background-color: peachpuff;
 }
 
 button {
@@ -43,9 +49,13 @@ button {
 }
 
 .equals {
+    color: peachpuff;
+    background-color: blueviolet;
     width: 105px;
 }
 
 .AC {
+    color: blueviolet;
+    background-color: peachpuff;
     width: 104px;
 }
