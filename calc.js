@@ -8,6 +8,7 @@ let b;
 let c;
 let result;
 let d;
+let f;
 
 function add(a,b) {
     return result = (Number(a)+ Number(b));
@@ -46,7 +47,7 @@ function operate () {
 
 numbers.forEach((number)=> number.addEventListener('click', 
 function (e) {
-  if (a === display.textContent || display.textContent === d) {
+  if (a === display.textContent || display.textContent === f) {
     display.textContent = '' ;
     display.textContent = e.target.textContent ;
   } else { display.textContent += e.target.textContent}
@@ -61,9 +62,10 @@ operators.forEach((operator) => operator.addEventListener('click',
       b = display.textContent ;
       display.textContent = '' ;
       operate() ;
-      d = result.toString() ;
-      display.textContent = d ;
-      a = d ;
+      d = (Math.round(1000*result))/1000 ;
+      f = d.toString();
+      display.textContent = f ;
+      a = f ;
       c = e.target.textContent ;
     }
   }));
@@ -76,7 +78,8 @@ equals.addEventListener('click', () => b = display.textContent)
 equals.addEventListener('click', () => display.textContent = '')
 equals.addEventListener('click', operate)
 equals.addEventListener('click', function(){
-   d = result.toString();
+   d = (Math.round(1000*result))/1000 ;
+   f = d.toString();
    display.textContent = d;
 })
 
