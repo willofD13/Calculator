@@ -8,7 +8,7 @@ let b;
 let c;
 let result;
 let d;
-let f;
+let f=null ;
 
 function add(a,b) {
     return result = (Number(a)+ Number(b));
@@ -58,7 +58,7 @@ operators.forEach((operator) => operator.addEventListener('click',
     if (a === null) {
       a = display.textContent ;
       c = e.target.textContent ; 
-    } else if ( a !== null) {
+    } else if ( a !== null && f === null) {
       b = display.textContent ;
       display.textContent = '' ;
       operate() ;
@@ -66,6 +66,18 @@ operators.forEach((operator) => operator.addEventListener('click',
       f = d.toString();
       display.textContent = f ;
       a = f ;
+      c = e.target.textContent ;
+    } else if ( a !== null && f !== null && a === f) {
+      b = display.textContent ;
+      display.textContent = '' ;
+      operate() ;
+      d = (Math.round(1000*result))/1000 ;
+      f = d.toString();
+      display.textContent = f ;
+      a = f ;
+      c = e.target.textContent ;
+    } else if ( a!== null && f!== null && a!=f) {
+      a=f ;
       c = e.target.textContent ;
     }
   }));
@@ -80,7 +92,7 @@ equals.addEventListener('click', operate)
 equals.addEventListener('click', function(){
    d = (Math.round(1000*result))/1000 ;
    f = d.toString();
-   display.textContent = d;
+   display.textContent = f;
 })
 
 
