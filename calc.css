@@ -9,6 +9,8 @@ body {
 }
 
 .display {
+    text-align: end;
+    font-size: 30px;
     width: 208px;
     height: 50px;
     border: 1px solid black;
