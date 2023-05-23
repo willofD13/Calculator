@@ -67,4 +67,6 @@ equals.addEventListener('click', operate)
 equals.addEventListener('click', () => secondPart.textContent = result)
 
 
-//clearButton.addEventListener('click', () => display.textContent = '')
+clearButton.addEventListener('click', () => firstPart.textContent = '')
+clearButton.addEventListener('click', () => middlePart.textContent = '')
+clearButton.addEventListener('click', () => secondPart.textContent = '')
