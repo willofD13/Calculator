@@ -22,8 +22,13 @@ body {
 }
 
 .numbers {
+    background-color: blueviolet;
     width: 160px;
 }
+#number {
+    background-color: blueviolet;
+}
+
 .operators {
     width: 50px;
 }
@@ -33,7 +38,7 @@ button {
     height: 50px;
 }
 
-#zero {
+.zero {
     width: 104px;
 }
 
