@@ -1,8 +1,5 @@
 const numbers = document.querySelectorAll('.numbers')
-const firstPart = document.querySelector('.firstPart')
-const secondPart = document.querySelector('.secondPart')
 const operators = document.querySelectorAll('.operators')
-const middlePart = document.querySelector('.middlePart')
 const equals = document.querySelector('.equals')
 const display = document.querySelector('.display')
 const clearButton = document.querySelector('.AC')
@@ -46,27 +43,25 @@ function operate () {
 }
 
 
-numbers.forEach( (number)=> number.addEventListener('click', 
-  function (e) {
-    if (a === firstPart.textContent) {
-    secondPart.textContent += e.target.textContent
-    } else { firstPart.textContent += e.target.textContent}
-  }))
+numbers.forEach((number)=> number.addEventListener('click', 
+function (e) {
+  if (a === display.textContent || display.textContent === resultString) {
+    display.textContent = '' ;
+    display.textContent = e.target.textContent ;
+  } else { display.textContent += e.target.textContent}
+}))
 
-
-operators.forEach((operator) => operator.addEventListener('click', () => a = firstPart.textContent ))
+operators.forEach((operator) => operator.addEventListener('click', () => a = display.textContent ))
 operators.forEach((operator) => operator.addEventListener('click', (e) => c = e.target.textContent ))
-operators.forEach((operator) => operator.addEventListener('click', (e) => middlePart.textContent = e.target.textContent ))
 
 
-equals.addEventListener('click', () => firstPart.textContent = '')
-equals.addEventListener('click', () => middlePart.textContent = '')
-equals.addEventListener('click', () => b = secondPart.textContent)
-equals.addEventListener('click', () => secondPart.textContent = '')
+
+
+
+equals.addEventListener('click', () => b = display.textContent)
+equals.addEventListener('click', () => display.textContent = '')
 equals.addEventListener('click', operate)
-equals.addEventListener('click', () => secondPart.textContent = result)
+equals.addEventListener('click', display.textContent = result)
 
 
-clearButton.addEventListener('click', () => firstPart.textContent = '')
-clearButton.addEventListener('click', () => middlePart.textContent = '')
-clearButton.addEventListener('click', () => secondPart.textContent = '')
+clearButton.addEventListener('click', () => display.textContent = '')
